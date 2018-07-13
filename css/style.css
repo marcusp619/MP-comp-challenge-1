@@ -32,14 +32,59 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-/*MODULE*/
 
-.tiles {
-  min-width: 300px;
+/*MODULE*/
+.blog {
+  background: rgb(96, 185, 128);
+  grid-area: blog;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog p {
+  margin-left: -20px;
 }
 
 .center {
   text-align: center;
+}
+
+.center p {
+  margin-top: 15px;
+}
+
+.contact {
+  background: rgb(66, 138, 191);
+  grid-area: contact;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.education {
+  background: rgb(224, 100, 81);
+  grid-area: education;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience {
+  background: rgb(66, 138, 191);
+  grid-area: experience;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  grid-area: image;
+  background-image: url("https://images.unsplash.com/photo-1531335962749-6eb4b01da36f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=de92061ebb09f6ef5f420f899556b2a8&auto=format&fit=crop&w=1234&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .info {
@@ -56,43 +101,6 @@ main {
   justify-content: center;
 }
 
-.image {
-  grid-area: image;
-  background-image: url("https://images.unsplash.com/photo-1531335962749-6eb4b01da36f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=de92061ebb09f6ef5f420f899556b2a8&auto=format&fit=crop&w=1234&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-}
-
-.experience {
-  background: rgb(66, 138, 191);
-  grid-area: experience;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.education {
-  background: rgb(224, 100, 81);
-  grid-area: education;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.blog {
-  background: rgb(96, 185, 128);
-  grid-area: blog;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.blog p {
-  margin-left: -20px;
-}
-
 .social {
   background: rgb(231, 113, 59);
   grid-area: social;
@@ -101,12 +109,8 @@ main {
   justify-content: center;
 }
 
-.contact {
-  background: rgb(66, 138, 191);
-  grid-area: contact;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+.tiles {
+  min-width: 300px;
 }
 
 .portfolio {
@@ -116,17 +120,6 @@ main {
   align-items: center;
   justify-content: center;
 }
-
-.center p {
-  margin-top: 15px;
-}
-
-h3 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin: 30px 0;
-}
-
 
 button {
   background-color: rgb(96, 185, 128);
@@ -141,10 +134,17 @@ button {
   width: 9rem;  
 }
 
+h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 30px 0;
+}
+
 p {
   font-weight: 100;
   line-height: 30px;
 }
+
 /*STATE*/
 @media screen and (max-width: 1075px) { 
   main {
