@@ -1,0 +1,158 @@
+/*BASE*/
+html {
+  box-sizing: border-box;
+  font-size: 16px; /*for rem purposes*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/*LAYOUT*/
+main {
+  display: grid;
+  font-family: font-family: 'Roboto', sans-serif;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "info info profile image image"
+                       "experience education blog image image"
+                       "social contact portfolio image image";
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+/*MODULE*/
+
+.tiles {
+  min-width: 300px;
+}
+
+.center {
+  text-align: center;
+}
+
+.info {
+  background: rgb(96, 185, 128);
+  grid-area: info; 
+  padding: 25px 40px;
+}
+
+.profile {
+  background: rgb(241, 162, 58);
+  grid-area: profile;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  grid-area: image;
+  background-image: url("https://images.unsplash.com/photo-1531335962749-6eb4b01da36f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=de92061ebb09f6ef5f420f899556b2a8&auto=format&fit=crop&w=1234&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.experience {
+  background: rgb(66, 138, 191);
+  grid-area: experience;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.education {
+  background: rgb(224, 100, 81);
+  grid-area: education;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog {
+  background: rgb(96, 185, 128);
+  grid-area: blog;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog p {
+  margin-left: -20px;
+}
+
+.social {
+  background: rgb(231, 113, 59);
+  grid-area: social;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  background: rgb(66, 138, 191);
+  grid-area: contact;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio {
+  background: rgb(231, 113, 59);
+  grid-area: portfolio;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.center p {
+  margin-top: 15px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 30px 0;
+}
+
+
+button {
+  background-color: rgb(96, 185, 128);
+  border: 2px solid white;
+  color: white;
+  font-weight: 800;
+  font-size: .8rem;
+  height: 4rem;
+  margin: 10px 0;
+  margin-right: 5px;
+  padding: .4rem;
+  width: 9rem;  
+}
+
+p {
+  font-weight: 100;
+  line-height: 30px;
+}
+/*STATE*/
+@media screen and (max-width: 1075px) { 
+  main {
+   grid-template-areas: "info profile image image"
+                       "experience education image image"
+                       "social contact image image"
+                       "blog portfolio image image"; 
+  }
+}
+
+/*THEME*/
