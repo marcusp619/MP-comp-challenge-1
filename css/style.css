@@ -20,9 +20,12 @@ ol, ul {
 }
 
 /*LAYOUT*/
+body {
+  height: 100vh;
+}
 main {
   display: grid;
-  font-family: font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "info info profile image image"
@@ -111,6 +114,7 @@ main {
 
 .tiles {
   min-width: 300px;
+  min-height: 300px;
 }
 
 .portfolio {
@@ -147,12 +151,19 @@ p {
 
 /*STATE*/
 @media screen and (max-width: 1075px) { 
-  main {
-   grid-template-areas: "info profile image image"
-                       "experience education image image"
-                       "social contact image image"
-                       "blog portfolio image image"; 
+  body {
+    height: 100vh;
   }
+  main {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "info info image image image"
+                       "experience education image image image"
+                       "social contact image image image"
+                       "profile blog portfolio ";
 }
-
+  .image {
+    grid-column: 3 / -1;
+    grid-area: image;
+  }  
 /*THEME*/
