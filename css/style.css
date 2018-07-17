@@ -154,16 +154,12 @@ p {
   body {
     height: 100vh;
   }
-  main {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "info info image image image"
-                       "experience education image image image"
-                       "social contact image image image"
-                       "profile blog portfolio ";
+} 
+
+@media screen and (max-width: 900px) {
+    main {
+    display: flex;
+    flex-direction: column;
+  } 
 }
-  .image {
-    grid-column: 3 / -1;
-    grid-area: image;
-  }  
 /*THEME*/
